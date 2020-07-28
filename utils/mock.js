@@ -1,6 +1,9 @@
 export const navigationRoutes = [
   {
     name: 'SwipeToDelete'
+  },
+  {
+    name: 'WalletAnimations'
   }
 ];
 
@@ -29,5 +32,30 @@ export const swipeToDeleteData = [
     number: 5,
     title: 'Tunacado',
     price: 'CTF 100'
+  },
+  {
+    number: 6,
+    title: 'Supercard',
+    price: 'CTF 25'
+  },
+  {
+    number: 7,
+    title: 'Supercard',
+    price: 'CTF 25'
+  },
+  {
+    number: 8,
+    title: 'Supercard',
+    price: 'CTF 25'
+  },
+  {
+    number: 9,
+    title: 'Supercard',
+    price: 'CTF 25'
+  },
+  {
+    number: 10,
+    title: 'Card',
+    price: 'CTF 25'
   }
 ];

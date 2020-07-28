@@ -13,14 +13,10 @@ const SwipeToDelete = ({ navigation }) => {
   const [swipeData, setData] = useState(swipeToDeleteData);
   const { container, headerItemContainer, headerItemText, elementsContainer } = styles;
 
+  const filterData = row => setData(swipeData.filter(item => item.number !== row.number));
+
   const renderItem = ({ item }) => {
-    return <SwipeElement
-      item={item} onSwipe={() => {
-      const newItems = [...swipeData];
-      newItems.splice(newItems.indexOf(item), 1);
-      setData(newItems);
-    }}
-    />;
+    return <SwipeElement item={item} onSwipe={filterData}/>;
   };
 
   return (

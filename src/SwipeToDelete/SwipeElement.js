@@ -42,9 +42,10 @@ const SwipeElement = ({ item, onSwipe }) => {
       cond(shouldRemove, [
         set(height, timing({ from: HEIGHT, to: 0 })),
         set(deleteOpacity, 0),
-        cond(not(clockRunning(clock)), call([], onSwipe))
+        cond(not(clockRunning(clock)), call([], () => onSwipe(item)))
       ])
-    ], [onSwipe]);
+    ], [onSwipe]
+  );
 
   return (
     <Animated.View>
